@@ -29,10 +29,12 @@ Github API(REST の方)
 https://svelte.dev/
 https://note.com/kawa1228/n/n3a45fab21f99
 https://tech.smartcamp.co.jp/entry/svelte-feature-for-vuejs-engineer
+https://developer.github.com/v3/search/#search-repositories
+https://developer.github.com/v3/search/#search-topics
 
 ## キー情報
 
 - githubtoken
   6a8325a916d4bbbc914f7a44562e0a800fbdc0e8
-- basic 用
+- basic 用(base64 エンコーディング後)
   eXNrc3Q5Njo2YTgzMjVhOTE2ZDRiYmJjOTE0ZjdhNDQ1NjJlMGE4MDBmYmRjMGU4
