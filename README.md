@@ -15,6 +15,21 @@ Github の人気リポジトリ検索
 - キー情報は yskst96 個人用を使うができればユーザーごとに OAuth 認証して発行したやつを
   使いたい
 
+### 使用する API
+
+Github API(REST の方)
+
+- リポジトリ検索
+  https://api.github.com/search/repositories?q=vue+in:readme,description+topic:javascript&sort=stars
+- トピック検索
+  https://api.github.com/search/topics?q=is:featured+java
+
+## 参考
+
+https://svelte.dev/
+https://note.com/kawa1228/n/n3a45fab21f99
+https://tech.smartcamp.co.jp/entry/svelte-feature-for-vuejs-engineer
+
 ## キー情報
 
 - githubtoken
