@@ -24,7 +24,7 @@ Github API(REST の方)
 - トピック検索
   https://api.github.com/search/topics?q=is:featured+java
 
-## 参考
+## 参考にしたサイト
 
 https://svelte.dev/
 https://note.com/kawa1228/n/n3a45fab21f99
