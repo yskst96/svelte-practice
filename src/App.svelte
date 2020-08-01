@@ -11,8 +11,6 @@
     repositoryInfoList = await serchRepositories();
     console.log(repositoryInfoList);
   });
-
-  console.log(process.env.FOO);
 </script>
 
 <style>

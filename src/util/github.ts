@@ -1,3 +1,6 @@
+
+declare const process: { env: { BASIC_AUTH_TOKEN: string } }
+
 export const serchRepositories: () => Promise<Array<RepositoryInfo>> = async () => {
 
     const params = {
@@ -7,7 +10,7 @@ export const serchRepositories: () => Promise<Array<RepositoryInfo>> = async () 
     const qs = new URLSearchParams(params);
 
     const headers = new Headers();
-    headers.append('Authorization', ' Basic eXNrc3Q5Njo2YTgzMjVhOTE2ZDRiYmJjOTE0ZjdhNDQ1NjJlMGE4MDBmYmRjMGU4')
+    headers.append('Authorization', ` Basic ${process.env.BASIC_AUTH_TOKEN}`)
     headers.append('Accept', 'application/json, application/vnd.github.mercy-preview+json')
 
 
