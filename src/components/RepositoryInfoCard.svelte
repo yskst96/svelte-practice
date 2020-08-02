@@ -7,6 +7,8 @@
 <style>
   .card {
     background-color: azure;
+    padding: 8px;
+    height: 100%;
   }
 </style>
 
