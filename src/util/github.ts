@@ -1,12 +1,11 @@
 
 declare const process: { env: { BASIC_AUTH_TOKEN: string } }
 
-export const serchRepositories: (word: string, topic: string) => Promise<Array<RepositoryInfo>> = async (word, topic) => {
+export const serchRepositories: (word: string) => Promise<Array<RepositoryInfo>> = async (word) => {
 
     const wordQuery = word ? `${word}+in:readme,description` : ''
-    const topicQuery = topic ? `topic:${topic}` : ''
 
-    const q = wordQuery// + (wordQuery ? `+${topicQuery}` : topicQuery)
+    const q = wordQuery
 
     console.log(q);
 

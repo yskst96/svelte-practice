@@ -12,19 +12,19 @@
   let topicList: Array<string>;
   let loading = true;
   let serchWord: string = '';
-  let serchTopic: string = '';
+  //let serchTopic: string = '';
 
   const handleSerchInput = (event) => {
     serchWord = event.target.value;
   };
 
-  const handleSerchTopic = (event) => {
-    serchTopic = event.target.value;
-    console.log(serchTopic);
-  };
+  // const handleSerchTopic = (event) => {
+  //   serchTopic = event.target.value;
+  //   console.log(serchTopic);
+  // };
 
   const serch = async () => {
-    repositoryInfoList = await serchRepositories(serchWord, serchTopic);
+    repositoryInfoList = await serchRepositories(serchWord);
     console.log(repositoryInfoList);
   };
 
