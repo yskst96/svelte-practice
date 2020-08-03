@@ -6,7 +6,7 @@ export const serchRepositories: (word: string, topic: string) => Promise<Array<R
     const wordQuery = word ? `${word}+in:readme,description` : ''
     const topicQuery = topic ? `topic:${topic}` : ''
 
-    const q = wordQuery + (wordQuery ? `+${topicQuery}` : topicQuery)
+    const q = wordQuery// + (wordQuery ? `+${topicQuery}` : topicQuery)
 
     console.log(q);
 

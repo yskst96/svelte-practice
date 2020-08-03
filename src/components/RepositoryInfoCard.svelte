@@ -13,7 +13,6 @@
 </style>
 
 <div class="card">
-  repo
   <div>{info.full_name}</div>
   <div>{info.description}</div>
   <div>{info.stargazers_count}</div>

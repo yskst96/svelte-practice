@@ -8,7 +8,7 @@
   import PullDown from './components/PullDown.svelte';
   import RepositoryInfoCard from './components/RepositoryInfoCard.svelte';
 
-  let repositoryInfoList: Array<RepositoryInfo>;
+  let repositoryInfoList: Array<RepositoryInfo> = [];
   let topicList: Array<string>;
   let loading = true;
   let serchWord: string = '';
@@ -25,49 +25,13 @@
 
   const serch = async () => {
     repositoryInfoList = await serchRepositories(serchWord, serchTopic);
+    console.log(repositoryInfoList);
   };
 
   onMount(async () => {
     // repositoryInfoList = await serchRepositories('vue', 'javascript');
-    repositoryInfoList = [
-      {
-        full_name: 'vue',
-        description: 'descriptiondescriptiondescriptiondescription',
-        stargazers_count: 20,
-        language: 'javascript',
-        url: 'https://xxxxxxxx',
-        clone_url: 'https://yyyyyyyyyy',
-      },
-      {
-        full_name: 'vue',
-        description: 'descriptiondescriptiondescriptiondescription',
-        stargazers_count: 20,
-        language: 'javascript',
-        url: 'https://xxxxxxxx',
-        clone_url: 'https://yyyyyyyyyy',
-      },
-      {
-        full_name: 'vue',
-        description: 'descriptiondescriptiondescriptiondescription',
-        stargazers_count: 20,
-        language: 'javascript',
-        url: 'https://xxxxxxxx',
-        clone_url: 'https://yyyyyyyyyy',
-      },
-      {
-        full_name: 'vue',
-        description: 'descriptiondescriptiondescriptiondescription',
-        stargazers_count: 20,
-        language: 'javascript',
-        url: 'https://xxxxxxxx',
-        clone_url: 'https://yyyyyyyyyy',
-      },
-    ];
-
-    // TODO fetch from Github API
     topicList = ['javascript', 'ruby', 'php'];
 
-    console.log(repositoryInfoList);
     loading = false;
   });
 </script>
@@ -93,9 +57,9 @@
     <div>
       <TextInput value={serchWord} on:input={handleSerchInput} />
     </div>
-    <div>
+    <!-- <div>
       <PullDown options={topicList} on:input={handleSerchTopic} />
-    </div>
+    </div> -->
     <div>
       <Button on:click={serch}>検索</Button>
     </div>
